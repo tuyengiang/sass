@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, fugiat.</h1>
+
+    <div class="test">
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, ipsum! </div>
+        <div> Lorem ipsum dolor sit amet.</div>
+        <div> Lorem ipsum dolor sit amet.</div>
+        <div class="no"> Lorem ipsum dolor sit amet.</div>
+        <div> Lorem ipsum dolor sit amet.</div>
+    </div>
+    <input type="text" name="abc">
+    <h1 class="hihi">Lorem, ipsum dolor.</h1>
+    <style>
+        .hihi:after{
+            content: '\025be';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: red;
+        }
+        .hihi{
+            position: relative;
+        }
+        .hihi:before{
+            content: 'abc';
+            position: absolute;
+            top: -20px;
+        }
+        .test > div:not([class='no']){
+            color: blue;
+        }
+        .test > div:nth-child(2){
+            background: yellow;
+            border: 1px solid #000;
+        }
+        .test > div:last-child{
+            background: yellow;
+        }
+    </style>
+</body>
+</html>

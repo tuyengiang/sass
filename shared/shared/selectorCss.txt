@@ -1,0 +1,31 @@
+1. * : element con bị ảnh hưởng
+2. a:link -> trỏ đến thẻ a chưa đc click
+   a:visted -> clicked
+   x:checked
+   x:hover
+   x:focus input
+
+3. x + y -> áp dụng cho element liền kề ngay sau nó (phần tử y đầu tiên)
+4. x > y -> phần tử con thứ nhất (Y) của X sẽ ảnh hưởng
+5. x ~ y -> tất cả element y sau x bỊ ảnh hưởng
+6. a[title] -> element nào có title sẽ ảnh hưởng
+   a[href=""]
+   input[type=""]
+   div[name=""]
+
+7. x:before -> tạo phần tử sau
+   y:after -> tạo phần tử trước
+
+8. x:not(p) -> ngoại trừ
+   x:not([class='abc'])
+   x:not([name='abc'])
+
+9. x::nth-child(n) -> phần tử thứ
+   x::first-child
+   x::last-child
+   x::nth-child(even) -> chẵn
+   x:nth-child(odd) -> lẻ
+
+10. X:nth-of-type(n) -> chọn phần tử thứ 3 có cùng kiểu
+    X:nth-last-of-type(n) -> phần tử thứ n tính từ dưới lên
+    X:first-of-type -> chọn element con đầu tiên và có cùng kiểu

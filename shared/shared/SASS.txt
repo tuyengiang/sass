@@ -1,0 +1,95 @@
+các tính năng của SASS : 7 tính năng chính
+
+- tạo biến
+	$color: blue;
+	.p{
+		color: $color;
+	}
+
+- xếp chồng
+	.a{
+		color: white;
+
+		.b{
+			&:hover{}
+			&:before{}
+			font:{
+				family: sans-serif;
+				style: normal;
+				size: 10px;
+			}
+		}
+	}
+
+
+- tạo hàm và sử dụng lại
+
+	+ hàm không đối số:
+
+		@mixin tenham(){
+			color: blue;
+		}
+
+		==> p{
+			@include tenham;
+		}
+
+	+ hàm có đối số:
+
+		@mixin tenham($color,$width,$font){
+			color: $color;
+			width: $width;
+			font-family: $font;
+		}
+
+		==> p{
+			@include tenham(blue, 20px, sans-serif);
+		}
+
+	+ sử dụng lại không cần tạo hàm:
+
+		%test-extend{
+			color: blue;
+		}
+		span{
+			@extend %test-extend;
+		}
+
+
+- nhúng file css khác
+
+	@import 'test';
+	@import 'import/test';
+
+- tính toán - lập trình
+
+	.a{
+		width: (100px - 10px) / 3
+	}
+
+
+- if else
+
+	@if ($with-nav > 280){
+	    @if ($with-nav < 720){
+	        h1 {
+	            display: inline-block;
+	        }
+	    }
+	    @else{
+	        h1 {
+	            display: block;
+	        }
+	    }
+	}
+	@else{
+	    h1 {
+	        display: none;
+	    }
+	}
+
+- for loop
+	@for <var> from <start> through <end> {
+	    <statements>
+	}
+

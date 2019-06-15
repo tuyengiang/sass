@@ -1,0 +1,42 @@
+$color: red;
+@import "abc";
+@mixin flexAll() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+@mixin pad($pad, $mar){
+    padding: $pad;
+    margin: $mar;
+}
+%colorAll {
+    color: blueviolet;
+}
+.container{
+    background: yellowgreen;
+    .card{
+        p{
+            color: $color;
+            &:hover{
+                color: lightcoral;
+            }
+        }
+    }
+}
+ul{
+    @include flexAll();
+    li{
+        @include pad(20px,10px);
+        @extend %colorAll;
+    }
+}
+small{
+    color: blue;
+}
+@for $i from 1 to 7 {
+    .list-item-#{$i}{
+        background: red;
+        width: 100px * $i;
+    }
+}
